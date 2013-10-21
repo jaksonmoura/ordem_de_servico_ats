@@ -1,0 +1,31 @@
+<h1>Serviços</h1>
+
+<table class="tb-lrg">
+  <thead>
+    <tr>
+      <th class="row-lrg">Descrição</th>
+      <th class="row-sml">Qtde</th>
+      <th class="row-sml">Valor (R$)</th>
+      <th class="row-med">Categoria</th>
+      <th class="action-row">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td class="row-lrg"><%= service.description %></td>
+        <td class="row-sml"><%= service.qty %></td>
+        <td class="row-sml"><%= service.value %></td>
+        <td class="row-med"><%= service.category.name if service.category %></td>
+        <td class="action-row"><%= link_to image_tag('edit.png'), edit_service_path(service), { title: "Editar", alt: "Editar" } %><%= link_to image_tag('remove.png'), service, method: :delete, data: { confirm: 'Quer realmente REMOVER?' }, title: "Remover", alt: "Remover" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="actions">
+  <%= link_to 'Adicionar serviço', new_service_path %>
+</div>

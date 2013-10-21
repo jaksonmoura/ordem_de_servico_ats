@@ -1,0 +1,48 @@
+<!-- 
+  Desenvolvido por: Jakson Rochelly - jrochelly@gmail.com
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Os</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="wrapper">
+    <% unless notice.blank? %>
+      <script>$(document).ready(function(){$('.notice').hide().slideDown().delay(5000).slideUp();});</script>
+        <div class="notice">
+          <%= notice %>
+        </div>
+      <% end %>
+
+      <header>
+        <div class="container">
+          <div class="logo"><%= link_to image_tag('logo_small.png'), root_path %></div>
+          <h1>Ordem de Serviço</h1>
+          <ul>
+              <li><%= link_to "Início", root_path %></li>
+              <li><%= link_to "Serviços", services_path %></li>
+              <li><%= link_to "Suprimentos", supplies_path %></li>
+          </ul>
+          <ul class="session">
+            <li><%= link_to "Perfil", services_path %></li>
+            <li><%= link_to image_tag("logout.png")+"Sair", services_path, class: "logout" %></li>
+          </ul>
+      </div>
+    </header>
+    <div class="main_content">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <p>Desenvolvido pela Diretoria de TI - ATS - Telefone: (63) 3218-4030 - Email: <a href="mailto:ti.ats@ats.to.gov.br">ti.ats@ats.to.gov.br</a></p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

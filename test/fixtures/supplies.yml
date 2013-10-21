@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  description: MyString
+  unit: MyString
+  qty: 1
+  value: 9.99
+  category_id: 
+
+two:
+  description: MyString
+  unit: MyString
+  qty: 1
+  value: 9.99
+  category_id: 
