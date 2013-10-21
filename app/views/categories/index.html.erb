@@ -1,0 +1,25 @@
+<h1>Categorias</h1>
+
+<table class="tb-sml">
+  <thead>
+    <tr>
+      <th class="row-med">Nome</th>
+      <th class="action-row">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= link_to image_tag('edit.png'), edit_category_path(category), { title: "Editar", alt: "Editar" } %><%= link_to image_tag('remove.png'), category, method: :delete, data: { confirm: 'Quer realmente REMOVER?' }, title: "Remover", alt: "Remover" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="actions">
+  <%= link_to 'Adicionar categoria', new_category_path %>
+</div>

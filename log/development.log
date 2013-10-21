@@ -24067,3 +24067,1679 @@ Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-20 13:24:03 -0200
 
 
 Started GET "/assets/edit.png" for 127.0.0.1 at 2013-10-20 13:24:03 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-21 08:53:02 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3020545565999423977__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (8.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateSupplyOrders (20131021104353)
+  [1m[35m (11.3ms)[0m  CREATE TABLE `supply_orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `supply_id` int(11), `order_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Table 'supply_orders' already exists: CREATE TABLE `supply_orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `supply_id` int(11), `order_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-21 08:54:22 -0200
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3020545565999423977__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-21 08:54:29 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2063899883832113591__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-21 08:54:30 -0200
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2063899883832113591__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-21 08:54:31 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2063899883832113591__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateSupplyOrders (20131021104353)
+  [1m[35m (0.4ms)[0m  CREATE TABLE `supply_orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `supply_id` int(11), `order_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Table 'supply_orders' already exists: CREATE TABLE `supply_orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `supply_id` int(11), `order_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (122.5ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (196.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateSupplyOrders (20131021104353)
+  [1m[35m (80.9ms)[0m  CREATE TABLE `supply_orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `supply_id` int(11), `order_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (101.4ms)[0m  [1mCREATE INDEX `index_supply_orders_on_supply_id` ON `supply_orders` (`supply_id`) [0m
+  [1m[35m (88.8ms)[0m  CREATE INDEX `index_supply_orders_on_order_id` ON `supply_orders` (`order_id`) 
+  [1m[36m (23.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (24.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131021104353')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateServiceOrders (20131021104423)
+  [1m[35m (89.1ms)[0m  CREATE TABLE `service_orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `service_id` int(11), `order_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (132.5ms)[0m  [1mCREATE INDEX `index_service_orders_on_service_id` ON `service_orders` (`service_id`) [0m
+  [1m[35m (80.1ms)[0m  CREATE INDEX `index_service_orders_on_order_id` ON `service_orders` (`order_id`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131021104423')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateOrders (20131021104511)
+  [1m[35m (84.6ms)[0m  CREATE TABLE `orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `refers_month` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131021104511')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateServices (20131021104544)
+  [1m[35m (117.0ms)[0m  CREATE TABLE `services` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255), `qty` int(11), `value` decimal(20,2), `category_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (79.7ms)[0m  [1mCREATE INDEX `index_services_on_category_id` ON `services` (`category_id`) [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20131021104544')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to CreateSupplies (20131021104636)
+  [1m[36m (90.1ms)[0m  [1mCREATE TABLE `supplies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255), `unit` varchar(255), `qty` int(11), `value` decimal(20,2), `category_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (80.2ms)[0m  CREATE INDEX `index_supplies_on_category_id` ON `supplies` (`category_id`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131021104636')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-21 08:56:50 -0200
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 84ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 08:56:57 -0200
+
+ActionController::RoutingError (No route matches [GET] "/categories"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (31.2ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (84.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 08:57:31 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2063899883832113591__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateCategories (20131021105728)
+  [1m[35m (232.5ms)[0m  CREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131021105728')
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 08:57:40 -0200
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  Rendered categories/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 221ms
+
+ActionView::Template::Error (/Users/jrochelly/Projects/ATS/Sistemas/os/app/assets/stylesheets/application.css has already been required):
+     5: <html>
+     6: <head>
+     7:   <title>Os</title>
+     8:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+     9:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2845757596693944198_70205865139920'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 08:58:23 -0200
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered categories/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 137ms
+
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x007fb4274dbd58>:0x007fb4261f4c80>):
+    20: 
+    21:       <header>
+    22:         <div class="container">
+    23:           <div class="logo"><%= link_to image_tag('logo_small.png'), root_path %></div>
+    24:           <h1>Ordem de Serviço</h1>
+    25:           <ul>
+    26:               <li><%= link_to "Início", root_path %></li>
+  app/views/layouts/application.html.erb:23:in `_app_views_layouts_application_html_erb___2845757596693944198_70205855231520'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 08:58:40 -0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  Rendered categories/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 08:58:40 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 08:58:40 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 08:58:40 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 08:58:40 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 08:58:40 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 08:58:40 -0200
+
+
+Started GET "/images/logo_small.png" for 127.0.0.1 at 2013-10-21 08:58:40 -0200
+
+ActionController::RoutingError (No route matches [GET] "/images/logo_small.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (71.0ms)
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 08:58:41 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 08:58:41 -0200
+
+
+Started GET "/images/logout.png" for 127.0.0.1 at 2013-10-21 08:58:41 -0200
+
+ActionController::RoutingError (No route matches [GET] "/images/logout.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 08:58:50 -0200
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered categories/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (/Users/jrochelly/Projects/ATS/Sistemas/os/app/assets/stylesheets/application.css has already been required):
+     5: <html>
+     6: <head>
+     7:   <title>Os</title>
+     8:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+     9:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+  app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___2845757596693944198_70205863984840'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  Rendered categories/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+
+
+Started GET "/images/logo_small.png" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+
+ActionController::RoutingError (No route matches [GET] "/images/logo_small.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (36.9ms)
+
+
+Started GET "/images/logout.png" for 127.0.0.1 at 2013-10-21 08:59:21 -0200
+
+ActionController::RoutingError (No route matches [GET] "/images/logout.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/jrochelly/.rvm/rubies/ruby-2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (24.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered categories/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 454ms (Views: 453.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:00:36 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  Rendered categories/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:02:01 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered categories/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:02:10 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  Rendered categories/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:02:18 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:02:23 -0200
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered categories/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:02:24 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:24 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:24 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:24 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:24 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:24 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:24 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:24 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:02:24 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:02:24 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:02:24 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  Rendered categories/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:03:12 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:03:18 -0200
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered categories/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:18 -0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:03:18 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:18 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:19 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:19 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:19 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:19 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:19 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:19 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:03:19 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:03:19 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  Rendered categories/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:03:31 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.6ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered categories/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:03:51 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  Rendered categories/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:04:19 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered categories/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:04:26 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  Rendered categories/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:04:27 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered categories/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:04:58 -0200
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2013-10-21 09:05:00 -0200
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (85.3ms)
+  Rendered categories/new.html.erb within layouts/application (119.9ms)
+Completed 200 OK in 165ms (Views: 164.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:05:01 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:05:01 -0200
+
+
+Started POST "/categories" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qtkz/xIb0VdkBE37UaD5QI5cE6h/8rOuRE4NdiGrK+o=", "category"=>{"name"=>"Serviço de Reparo"}, "commit"=>"Salvar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (23.9ms)[0m  INSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES ('2013-10-21 11:05:03', 'Serviço de Reparo', '2013-10-21 11:05:03')
+  [1m[36m (19.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/categories/1
+Completed 302 Found in 87ms (ActiveRecord: 43.3ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (41.2ms)[0m  SELECT `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1
+  Rendered categories/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 65ms (Views: 21.3ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:05:03 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:05:05 -0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  Rendered categories/index.html.erb within layouts/application (54.2ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:05:05 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:05:05 -0200
+
+
+Started GET "/assets/edit.png" for 127.0.0.1 at 2013-10-21 09:05:05 -0200
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2013-10-21 09:05:05 -0200
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2013-10-21 09:05:43 -0200
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (10.5ms)
+  Rendered categories/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 43ms (Views: 17.5ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:05:44 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:05:44 -0200
+
+
+Started POST "/categories" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qtkz/xIb0VdkBE37UaD5QI5cE6h/8rOuRE4NdiGrK+o=", "category"=>{"name"=>"teste"}, "commit"=>"Salvar"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES ('2013-10-21 11:05:46', 'teste', '2013-10-21 11:05:46')[0m
+  [1m[35m (16.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 21ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+  Rendered categories/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/edit.png" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2013-10-21 09:05:46 -0200
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-10-21 09:07:08 -0200
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered categories/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 145ms (Views: 126.5ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/assets/edit.png" for 127.0.0.1 at 2013-10-21 09:07:09 -0200
+
+
+Started GET "/services" for 127.0.0.1 at 2013-10-21 09:11:38 -0200
+Processing by ServicesController#index as HTML
+  [1m[36mService Load (0.3ms)[0m  [1mSELECT `services`.* FROM `services`[0m
+  Rendered services/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 83ms (Views: 41.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:11:38 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:11:38 -0200
+
+
+Started GET "/services/new" for 127.0.0.1 at 2013-10-21 09:11:40 -0200
+Processing by ServicesController#new as HTML
+  Rendered services/_form.html.erb (54.2ms)
+  Rendered services/new.html.erb within layouts/application (55.9ms)
+Completed 500 Internal Server Error in 71ms
+
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    25:     </div>
+    26:     <div class="field">
+    27:       <%= f.label :category_id, "Categoria" %><br>
+    28:       <%= f.select :category_id, @categories.map {|c| [c.name, c.id] }, {include_blank: 'Escolha o tipo'}, required: true %>
+    29:     </div>
+    30: 
+    31:   </div>
+  app/views/services/_form.html.erb:28:in `block in _app_views_services__form_html_erb__2671694865796265050_70205864362300'
+  app/views/services/_form.html.erb:1:in `_app_views_services__form_html_erb__2671694865796265050_70205864362300'
+  app/views/services/new.html.erb:3:in `_app_views_services_new_html_erb__2553361342301794063_70205864350900'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.3ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2013-10-21 09:11:40 -0200
+Processing by ServicesController#new as HTML
+  Rendered services/_form.html.erb (2.8ms)
+  Rendered services/new.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    25:     </div>
+    26:     <div class="field">
+    27:       <%= f.label :category_id, "Categoria" %><br>
+    28:       <%= f.select :category_id, @categories.map {|c| [c.name, c.id] }, {include_blank: 'Escolha o tipo'}, required: true %>
+    29:     </div>
+    30: 
+    31:   </div>
+  app/views/services/_form.html.erb:28:in `block in _app_views_services__form_html_erb__2671694865796265050_70205865055760'
+  app/views/services/_form.html.erb:1:in `_app_views_services__form_html_erb__2671694865796265050_70205865055760'
+  app/views/services/new.html.erb:3:in `_app_views_services_new_html_erb__2553361342301794063_70205865018140'
+
+
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/jrochelly/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/services/new" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+Processing by ServicesController#new as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories`
+  Rendered services/_form.html.erb (43.6ms)
+  Rendered services/new.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 61ms (Views: 48.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:12:34 -0200
+
+
+Started POST "/services" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+Processing by ServicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qtkz/xIb0VdkBE37UaD5QI5cE6h/8rOuRE4NdiGrK+o=", "service"=>{"description"=>"teste", "qty"=>"123", "value"=>"12389.23", "category_id"=>"1"}, "commit"=>"Salvar"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (30.2ms)[0m  INSERT INTO `services` (`category_id`, `created_at`, `description`, `qty`, `updated_at`, `value`) VALUES (1, '2013-10-21 11:12:53', 'teste', 123, '2013-10-21 11:12:53', 12389.23)
+  [1m[36m (12.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/services
+Completed 302 Found in 79ms (ActiveRecord: 42.8ms)
+
+
+Started GET "/services" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+Processing by ServicesController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /Users/jrochelly/Projects/ATS/Sistemas/os/app/controllers/services_controller.rb:7)
+  [1m[35mService Load (0.3ms)[0m  SELECT `services`.* FROM `services`
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` IN (1)[0m
+  Rendered services/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 150ms (Views: 7.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/edit.png" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2013-10-21 09:12:53 -0200
+
+
+Started GET "/services" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+Processing by ServicesController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /Users/jrochelly/Projects/ATS/Sistemas/os/app/controllers/services_controller.rb:7)
+  [1m[35mService Load (0.3ms)[0m  SELECT `services`.* FROM `services`
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` IN (1)[0m
+  Rendered services/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 115ms (Views: 112.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/assets/edit.png" for 127.0.0.1 at 2013-10-21 09:14:56 -0200
+
+
+Started GET "/services" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+Processing by ServicesController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /Users/jrochelly/Projects/ATS/Sistemas/os/app/controllers/services_controller.rb:7)
+  [1m[35mService Load (0.3ms)[0m  SELECT `services`.* FROM `services`
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` IN (1)[0m
+  Rendered services/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/edit.png" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2013-10-21 09:14:58 -0200
+
+
+Started GET "/services" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+Processing by ServicesController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /Users/jrochelly/Projects/ATS/Sistemas/os/app/controllers/services_controller.rb:7)
+  [1m[35mService Load (0.3ms)[0m  SELECT `services`.* FROM `services`
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` IN (1)[0m
+  Rendered services/index.html.erb within layouts/application (266.2ms)
+Completed 200 OK in 275ms (Views: 271.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/edit.png" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:15:20 -0200
+
+
+Started GET "/services" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+Processing by ServicesController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /Users/jrochelly/Projects/ATS/Sistemas/os/app/controllers/services_controller.rb:7)
+  [1m[35mService Load (0.3ms)[0m  SELECT `services`.* FROM `services`
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE `categories`.`id` IN (1)[0m
+  Rendered services/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/services.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/supplies.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/logo_small.png" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/edit.png" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/logout.png" for 127.0.0.1 at 2013-10-21 09:15:26 -0200
+
+
+Started GET "/assets/remove.png" for 127.0.0.1 at 2013-10-21 09:15:26 -0200

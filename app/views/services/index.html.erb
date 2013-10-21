@@ -14,11 +14,11 @@
   <tbody>
     <% @services.each do |service| %>
       <tr>
-        <td class="row-lrg"><%= service.description %></td>
-        <td class="row-sml"><%= service.qty %></td>
-        <td class="row-sml"><%= service.value %></td>
-        <td class="row-med"><%= service.category.name if service.category %></td>
-        <td class="action-row"><%= link_to image_tag('edit.png'), edit_service_path(service), { title: "Editar", alt: "Editar" } %><%= link_to image_tag('remove.png'), service, method: :delete, data: { confirm: 'Quer realmente REMOVER?' }, title: "Remover", alt: "Remover" %></td>
+        <td><%= service.description %></td>
+        <td><%= service.qty %></td>
+        <td><%= number_to_currency(service.value, unit: "R$ ", separator: ",", delimiter: ".") %></td>
+        <td><%= service.category.name if service.category %></td>
+        <td><%= link_to image_tag('edit.png'), edit_service_path(service), { title: "Editar", alt: "Editar" } %><%= link_to image_tag('remove.png'), service, method: :delete, data: { confirm: 'Quer realmente REMOVER?' }, title: "Remover", alt: "Remover" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -4,17 +4,13 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
-    @services = Service.all
-  end
-
-  # GET /services/1
-  # GET /services/1.json
-  def show
+    @services = Service.all(include: "category")
   end
 
   # GET /services/new
   def new
     @service = Service.new
+    @categories = Category.all
   end
 
   # GET /services/1/edit
@@ -28,8 +24,8 @@ class ServicesController < ApplicationController
 
     respond_to do |format|
       if @service.save
-        format.html { redirect_to @service, notice: 'Service was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @service }
+        format.html { redirect_to services_path, notice: 'Service was successfully created.' }
+        format.json { render action: 'index', status: :created, location: @service }
       else
         format.html { render action: 'new' }
         format.json { render json: @service.errors, status: :unprocessable_entity }
@@ -42,7 +38,7 @@ class ServicesController < ApplicationController
   def update
     respond_to do |format|
       if @service.update(service_params)
-        format.html { redirect_to @service, notice: 'Service was successfully updated.' }
+        format.html { redirect_to services_path, notice: 'Service was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

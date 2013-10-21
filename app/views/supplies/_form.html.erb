@@ -1,10 +1,9 @@
 <%= form_for(@supply) do |f| %>
   <% if @supply.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@supply.errors.count, "error") %> prohibited this supply from being saved:</h2>
-
+      <h2>Algum(ns) <%= pluralize(@supply.errors.count, "erro") %> impediu este item de ser salvo:</h2>
       <ul>
-      <% @supply.errors.full_messages.each do |msg| %>
+      <% @supply.errors.full_messages.each do |i, msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -12,26 +11,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.label :description, "Descrição" %><br>
+    <%= f.text_area :description, rows: 2, cols: 30, autofocus: true, required: true %>
+  </div>
+  <div class="field _leftalg">
+    <%= f.label :unit, "Unidade" %><br>
+    <%= f.number_field :unit, required: true %>
+  </div>
+  <div>
+    <%= f.label :qty, "Quatidade" %><br>
+    <%= f.number_field :qty, required: true %>
   </div>
   <div class="field">
-    <%= f.label :unit %><br>
-    <%= f.text_field :unit %>
+    <%= f.label :value, "Valor (R$)" %><br>
+    <%= f.text_field :value, required: true %>
   </div>
   <div class="field">
-    <%= f.label :qty %><br>
-    <%= f.number_field :qty %>
-  </div>
-  <div class="field">
-    <%= f.label :value %><br>
-    <%= f.text_field :value %>
-  </div>
-  <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
+    <%= f.label :category_id, "Categoria" %><br>
+    <%= f.select :category_id, @categories.map {|c| [c.name, c.id] }, {include_blank: 'Escolha o tipo'}, required: true %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Salvar" %>
   </div>
 <% end %>

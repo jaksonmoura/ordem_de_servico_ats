@@ -1,8 +1,7 @@
 <%= form_for(@service) do |f| %>
   <% if @service.errors.any? %>
     <div id="error_explanation">
-      <h2>Algum(ns) <%= pluralize(@supply.errors.count, "erro") %> impediu este item de ser salvo:</h2>
-
+      <h2>Algum(ns) <%= pluralize(@service.errors.count, "erro") %> impediu este item de ser salvo:</h2>
       <ul>
       <% @supply.errors.full_messages.each do |i, msg| %>
         <li><%= msg %></li>
