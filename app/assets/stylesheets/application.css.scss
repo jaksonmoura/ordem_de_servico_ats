@@ -1,0 +1,401 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application.wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+ @import 'misc';
+
+ $bg: #435B6D;
+ $bgc: #f9f9f9;
+ $advice: #BEE8FF;
+
+ html, body{
+   margin: 0;
+   padding: 0;
+   height: 100%;
+ }
+
+ *, *:before, *:after {
+   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+  }
+
+ body{
+   margin: 0 auto;
+   background: $bg;
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 16px;
+   color: #555;
+ }
+
+ a{
+   text-decoration: none;
+ }
+
+ .container, .center_container{
+   float: left;
+   width: 100%;
+ }
+ .center_container{
+   text-align: center;
+ }
+
+ .notice{
+   width: 40%;
+   position: fixed;
+   top: 0;
+   left: 30%;
+   background: #2F6BB1;
+   border-radius: 0 0 3px 3px;
+   color: #fff;
+   height: 40px;
+   padding: 10px 0;
+   text-align: center;
+ }
+
+ footer{
+   font-size: 12px;
+   color: #777;
+   text-align: center;
+   margin: 30px 0;
+   float: left;
+   width: 100%;
+
+   a{
+     color: #777; 
+     text-decoration: underline;
+   }
+ }
+
+ input, select, textarea{
+   font-size: 16px;
+   padding: 5px;
+ }
+
+ input, textarea{
+   border: 1px solid #999;
+   border-radius: 3px;
+ }
+
+ // ==================
+ //   DEFAULT LAYOUT
+ // ==================
+
+ .wrapper{
+   width: 100%;
+   margin: 0 auto;
+
+   footer{
+     color: hsla(0, 100%, 100%, .7);
+
+     a{
+       color: hsla(0, 100%, 100%, .7);
+     }
+   }
+
+   .center_content{
+     margin: 0 auto;
+     width: 40%;
+     text-shadow: 0 1px 0px #fff;
+
+     .box{
+       float: left;
+       background: #d9d9d9;
+       width: 100%;
+       padding: 10px;
+       border-radius: 5px;
+     }
+
+     .field{
+       margin: 0 0 10px 0;
+     }
+
+   }
+
+   .warning, .advice{
+     border-radius: 5px;
+     text-align: center;
+
+     .emphasis{
+       font-size: 25px;
+       margin: 10px;
+
+       img{
+         margin: 4px 0 -4px 0;
+       }
+     }
+   }
+
+   .warning{
+     background: #FFEB00;
+     border: 1px solid #CF9731;
+     color: #AD7E26;
+     padding: 10px;
+     margin: 0 auto;
+   }
+
+   .advice{
+     background: $advice;
+     border: 1px solid rgba($bg, .4);
+     color: $bg;
+     float: left;
+     margin: 10px 0;
+     width: 100%;
+     padding: 10px 0;
+   }
+
+   header{
+     width: 100%;
+     margin: 0 0 30px 0;
+     height: 50px;
+     background: $bgc;
+     clear: both;
+     background: #364753;
+     color: #fff;
+
+     ul{
+       float: left;
+       margin: 0 20px 0 0px; 
+
+       li{
+         display: inline;
+
+         a{
+           line-height: 50px;
+           padding: 0 10px;
+           float: left;
+         }
+
+         a:hover{
+           background: rgba(#fff, 0.15);
+         }
+       }
+     }
+
+     h1{
+       float: left;
+       margin: 0;
+       padding: 0;
+       font-size: 16px;
+       font-weight: normal;
+       line-height: 50px;
+     }
+
+     .logo img{
+       float: left;
+       margin: 7px 10px 0 0;
+     }
+
+     .container{
+       float: none;
+       margin: 0 auto;
+       width: 94%;
+     }
+
+     a, a:visited{
+       color: #fff;
+     }
+
+     .session{
+      float: right;
+     }
+
+     .logout, .login{
+
+       img{
+         float: left;
+         margin: 16px 5px 0 0;
+       }
+     }
+
+     .logout:hover{
+      background: rgba(#fff, 0.15)
+     }
+   }
+
+   .main_content{
+     background: $bgc;
+     clear: both;
+     width: 93%;
+     margin: 0px auto;
+     border-radius: 5px;
+     padding: 15px;
+     overflow: auto;
+   }
+
+   .left_content, .right_content{
+     width: 48.7%;
+     float: left;
+     margin: 0;
+
+     form{
+       width: 92%;
+     }
+   }
+
+   .right_content{
+     width: 50%;
+   }
+
+   .info, .ok{
+     padding: 10px;
+     border-radius: 5px;
+     text-shadow: 0 1px 0px hsla(0,100%, 100%, .5);
+
+     ul{
+       margin: 0;
+       padding: 0 0 0 15px;
+
+       li{
+         margin: 0 0 15px 0;
+       }
+     }
+   }
+
+   .info{
+     background: #B5E7B5;
+     color: #008080;
+     margin: 0 0 15px 0;
+   }
+
+   .ok{
+     background: $advice;
+     color: $bg;
+     border: 1px solid rgba($bg, .4);
+   }
+
+   .actions{
+     margin: 10px 0;
+     input, a{
+       color: #fff;
+       cursor: pointer;
+       border-radius: 3px;
+       background-color: #0062d5;
+       background-image: -webkit-gradient(linear, left top, left bottom, from(#0062d5), to(#134782));
+       background-image: -webkit-linear-gradient(top, #0062d5, #134782);
+       background-image:    -moz-linear-gradient(top, #0062d5, #134782);
+       background-image:      -o-linear-gradient(top, #0062d5, #134782);
+       background-image:         linear-gradient(to bottom, #0062d5, #134782);
+       padding: 10px;
+       border: none;
+     }
+
+     input:hover, a:hover{
+       background-color: #4188d9;
+       background-image: -webkit-gradient(linear, left top, left bottom, from(#4188d9), to(#134782));
+       background-image: -webkit-linear-gradient(top, #4188d9, #134782);
+       background-image:    -moz-linear-gradient(top, #4188d9, #134782);
+       background-image:      -o-linear-gradient(top, #4188d9, #134782);
+       background-image:         linear-gradient(to bottom, #4188d9, #134782);
+     }
+
+   }
+
+ }
+
+ // ==================
+ //       TABLE
+ // ==================
+
+ .tb_lrg{
+  width: 100%;
+ }
+
+ .tb_med{
+  width: 65%;
+ }
+
+ .tb_sml{
+  width: 35%;
+ }
+
+ .tb_lrg, .tb_med, .tb_sml{
+  text-shadow: 0 1px 0px #fff;
+  border-spacing: 0;
+  border: 1px solid #9FC8D8;
+  border-radius: 5px;
+  margin: 10px 0;
+
+  thead{
+    width: 100%;
+    background: #9FC8D8;
+  }
+
+  th{ 
+    text-align: left;
+    color: #496279;
+    text-shadow: 1px 1px 0px #D4EBF1;
+    border: 0;
+    border-bottom: 1px solid #9FC8D8;
+    margin: 0;
+    padding: 10px 0 10px 5px;
+    min-width: 100px;
+  }
+
+  tbody{
+    border: 1px solid #9FC8D8;
+
+    width: 99%;
+
+    td{
+      padding: 2px 0 2px 5px;
+      border-right: 1px solid #9FC8D8;
+      border-top: 1px solid #ffffff;
+      border-bottom: 1px solid #9FC8D8;
+      min-width: 100px;
+    }
+
+    tr:hover, tr:nth-child(2n):hover{
+      background: papayawhip;
+    }
+
+    tr:last-child td{
+      border-bottom: none;
+    }
+
+    td:last-child{
+      border-right: none;
+      display: block;
+    }
+  
+    tr:nth-child(2n){
+      background: #EDF5F8;
+    }
+
+    tr:nth-child(2n+1){
+      border-top: 1px solid #ffffff;
+      border-bottom: 1px solid #9FC8D8;
+    }
+
+    tr{
+      max-height: 80px;
+      border-bottom:1px solid #e0e0e0;
+    }
+
+  }
+
+  .action_row{
+    width: 80px;
+  }
+
+  .row_sml{
+    min-width: 40px;
+  }
+
+  .row_med{
+    max-width: 100px;
+  }
+
+  .row_lrg{
+    min-width: 150px;
+  }
+
+ }

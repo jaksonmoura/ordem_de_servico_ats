@@ -1,14 +1,14 @@
 <h1>Suprimentos</h1>
 
-<table class="tb-lrg">
+<table class="tb_lrg">
   <thead>
     <tr>
-      <th class="row-lrg">Descrição</th>
-      <th class="row-sml">UND</th>
-      <th class="row-sml">Qtde</th>
-      <th class="row-sml">Valor (R$)</th>
-      <th class="row-med">Categoria</th>
-      <th class="action-row">Ações</th>
+      <th class="row_lrg">Descrição</th>
+      <th class="row_sml">UND</th>
+      <th class="row_sml">Qtde</th>
+      <th class="row_sml">Valor (R$)</th>
+      <th class="row_med">Categoria</th>
+      <th class="action_row">Ações</th>
     </tr>
   </thead>
 
@@ -18,7 +18,7 @@
         <td><%= supply.description %></td>
         <td><%= supply.unit %></td>
         <td><%= supply.qty %></td>
-        <td><%= number_to_currency(service.value, unit: "R$ ", separator: ",", delimiter: ".") %></td>
+        <td><%= number_to_currency(supply.value, unit: "R$ ", separator: ",", delimiter: ".") %></td>
         <td><%= supply.category.name if supply.category %></td>
         <td><%= link_to image_tag('edit.png'), edit_supply_path(supply), { title: "Editar", alt: "Editar" } %><%= link_to image_tag('remove.png'), supply, method: :delete, data: { confirm: 'Quer realmente REMOVER?' }, title: "Remover", alt: "Remover" %></td>
       </tr>

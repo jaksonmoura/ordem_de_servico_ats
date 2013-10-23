@@ -11,13 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131021105728) do
+ActiveRecord::Schema.define(version: 20131023204511) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "items", force: true do |t|
+    t.integer  "service_id"
+    t.integer  "supply_id"
+    t.integer  "order_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "items", ["order_id"], name: "index_items_on_order_id", using: :btree
+  add_index "items", ["service_id"], name: "index_items_on_service_id", using: :btree
+  add_index "items", ["supply_id"], name: "index_items_on_supply_id", using: :btree
 
   create_table "orders", force: true do |t|
     t.integer  "refers_month"

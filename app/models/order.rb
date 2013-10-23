@@ -1,6 +1,6 @@
 class Order < ActiveRecord::Base
-  has_many :service_orders
-  has_many :services, through: :service_orders
-  has_many :supply_orders
-  has_many :suppliess, through: :supply_orders
+  has_many :items
+  has_many :services, through: :items
+  has_many :supplies, through: :items
+  validates_presence_of :refers_month
 end

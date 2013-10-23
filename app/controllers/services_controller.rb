@@ -15,6 +15,7 @@ class ServicesController < ApplicationController
 
   # GET /services/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /services

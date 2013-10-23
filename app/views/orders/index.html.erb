@@ -1,27 +1,31 @@
-<h1>Listing orders</h1>
+<h1>Ordens de serviço</h1>
 
-<table>
+<div class="_rightalg _bx30pc">
+  <h2 class="hmed">Nova ordem de serviço</h2>
+  <%= render 'form' %>
+</div>
+
+<table class="tb_med">
   <thead>
     <tr>
-      <th>Refers month</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Mês referente</th>
+      <th>Serviços</th>
+      <th>Suprimentos</th>
+      <th>Total</th>
+      <th>Ações</th>
     </tr>
   </thead>
 
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <td><%= order.refers_month %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= @month[order.refers_month] %></td>
+        <td><%= order.services.length %></td>
+        <td><%= order.supplies.length %></td>
+        <% total_v = order.services.map { |s| s.value }.sum + order.supplies.map { |s| s.value }.sum %>
+        <td><%= number_to_currency(total_v, unit: "R$ ", delimiter: ".", separator: ",") %></td>
+        <td><%= link_to image_tag('details.png'), order, title: "Detalhes", alt: "Detalhes" %><%= link_to image_tag('edit.png'), edit_order_path(order), { title: "Editar", alt: "Editar" } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Order', new_order_path %>

@@ -1,11 +1,17 @@
 Os::Application.routes.draw do
+  get "itens/create"
+  get "itens/destroy"
   resources :categories
 
   resources :supplies
 
   resources :services
 
-  resources :orders
+  resources :itens, only: [:create, :destroy]
+
+  resources :orders do
+    get :find_item, :on => :collection
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,63 @@
+
+
+// Text's
+.txt-center{
+ text-align: center;
+}
+
+.txt-right{
+ text-align: right;
+}
+
+.txt-left{
+ text-align: left;
+}
+
+// Align's
+._leftalg{
+  float: left;
+}
+
+._rightalg{
+  float: right;
+}
+
+._centeralg{
+  margin: 0 auto;
+}
+
+// Boxes's size
+._bx30pc{
+  width: 30%;
+}
+
+._bx50pc{
+  width: 50%;
+}
+
+._bx70pc{
+  width: 70%;
+}
+
+._bx100pc{
+  width: 100%;
+}
+
+// Heading
+
+.hbig, .hmed, .hsml, h1, h2, h3, h4, h5, h6{
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.hbig{
+ font-size: 30px;
+}
+
+.hmed{
+ font-size: 24px;
+}
+
+.hsml{
+ font-size: 18px;
+}

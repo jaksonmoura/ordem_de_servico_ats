@@ -1,9 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Refers month:</strong>
-  <%= @order.refers_month %>
+  <strong>Mês de referência:</strong>
+  <%= @month[@order.refers_month] %>
 </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<div class="_leftalg _bx100pc">
+  <%= link_to 'Editar', edit_order_path(@order) %> |
+  <%= link_to "Remover", '#', class: "remove_lnk_btn" %>
+</div>
+
+<div class="_bx30pc _leftalg remove_order">
+  <div class="warning _leftalg">CUIDADO! Esta ação é perigosa e você não pode desfazer, prossiga com cautela!</div>
+  <%= link_to 'Estou ciente e quero remover.', @order, method: :delete, data: { confirm: "Quer realmente REMOVER?\nEsta ação não tem volta!" }, title: "Remover", alt: "Remover" %>
+</div>
+
+<% content_for :foot do %>
+  <script>
+  $(document).ready( function(e) {
+    $('.remove_order').hide();
+    // $('.remove_lnk_btn').preventDefault();
+    $(e).preventDefault();
+  });
+  $('.remove_lnk_btn').click( function(e) {
+    $('.remove_order').slideToggle(1000);
+  });
+  </script>
+<% end %>

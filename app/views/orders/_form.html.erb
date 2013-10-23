@@ -1,10 +1,13 @@
-<%= form_for(@order) do |f| %>
+<%= form_for @order, :html => {:class => "_leftalg _bx100pc"}  do |f| %>
   <% if @order.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
-
+      <% if @order.errors.count <= 1 %>
+      <h2><%= pluralize(@order.errors.count, "erro") %> impediu esta Ordem de Serviço de ser salva:</h2>
+      <% else %>
+      <h2><%= pluralize(@order.errors.count, "erro") %> impediram esta Ordem de Serviço de ser salva:</h2>
+      <% end %>
       <ul>
-      <% @order.errors.full_messages.each do |msg| %>
+      <% @order.errors.each do |i, msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -12,10 +15,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :refers_month %><br>
-    <%= f.number_field :refers_month %>
+    <%= f.label :refers_month, "Mês de referência" %><br>
+    <%= f.select :refers_month, @month.map { |i, m| [m, i] }, {include_blank: "Selecione o mês"} %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Adicionar" %>
   </div>
 <% end %>

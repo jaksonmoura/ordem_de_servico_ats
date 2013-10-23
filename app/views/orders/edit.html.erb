@@ -1,6 +1,28 @@
-<h1>Editing order</h1>
+<div class="_bx30pc _leftalg">
+  <h1>Editing order</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Show', @order %> |
-<%= link_to 'Back', orders_path %>
+  <%= link_to 'Show', @order %> |
+  <%= link_to 'Back', orders_path %>
+</div>
+
+<div class="_bx70pc _leftalg">
+  <h2 class="hbig">Itens</h2>
+  <div class="new_item _bx100pc _leftalg">
+    <h3 class="hmed">Novo item</h3>
+    <%= form_tag(itens_path, remote: false) do %>
+      <div class="field">
+        <%= label_tag :name, "Item: " %><%= text_field_tag :name, nil, class: "item_name", autofocus: true, 'data-autocompleteUrl' => find_item_orders_path %>
+        <%= hidden_field_tag :order_id, @order.id, name: "item[order_id]" %>
+        <%= hidden_field_tag :service_id, nil, name: "item[service_id]", value: "" %>
+        <%= hidden_field_tag :supply_id, nil, name: "item[supply_id]", value: "" %>
+        <%= submit_tag "Adicionar" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<% content_for :foot do %>
+  <%= javascript_include_tag "find_item", :cache => true %>
+<% end %>
