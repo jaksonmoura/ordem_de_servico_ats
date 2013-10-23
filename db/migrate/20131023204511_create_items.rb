@@ -1,6 +1,7 @@
-class CreateSupplyOrders < ActiveRecord::Migration
+class CreateItems < ActiveRecord::Migration
   def change
-    create_table :supply_orders do |t|
+    create_table :items do |t|
+      t.references :service, index: true
       t.references :supply, index: true
       t.references :order, index: true
 
