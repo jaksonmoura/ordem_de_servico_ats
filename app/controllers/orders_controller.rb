@@ -24,6 +24,7 @@ class OrdersController < ApplicationController
   # GET /orders/1/edit
   def edit
     @month = month
+    @orders = @order.services + @order.supplies
   end
 
   # POST /orders

@@ -1,15 +1,23 @@
-class ItensController < ApplicationController
+class ItemsController < ApplicationController
   before_action :set_order, only: [:destroy]
 
   def create
     @item = Item.new(item_params)
+    unless @item.service_id.nil?
+      @sorder = @item.service
+      @kind = "srv"
+    else
+      @sorder = @item.supply
+      @kind = "sup"
+    end
 
     respond_to do |format|
       if @item.save
         format.html
         format.json
+        format.js
       else
-        format.html
+        format.js { render 'error' }
         format.json { render json: @item.errors, status: :unprocessable_entity }
       end
     end
@@ -20,6 +28,7 @@ class ItensController < ApplicationController
     respond_to do |format|
       format.html { redirect_to orders_url }
       format.json { head :no_content }
+      format.js
     end
   end
 

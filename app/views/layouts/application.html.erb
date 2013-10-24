@@ -23,11 +23,16 @@
         <div class="container">
           <div class="logo"><%= link_to image_tag('logo_small.png'), root_path %></div>
           <h1>Ordem de Serviço</h1>
-          <ul>
+          <ul class="top_menu">
               <li><%= link_to "Início", root_path %></li>
-              <li><%= link_to "Serviços", services_path %></li>
-              <li><%= link_to "Suprimentos", supplies_path %></li>
-              <li><%= link_to "Ordens de serviço", orders_path %></li>
+              <li><%= link_to "Cadastro ▾", '#' %>
+                <ul>
+                  <li><%= link_to "Serviços", services_path %></li>
+                  <li><%= link_to "Suprimentos", supplies_path %></li>
+                  <li><%= link_to "Ordens de serviço", orders_path %></li>
+                </ul>
+              </li>
+              <li><%= link_to "Relatório", orders_path %></li>
           </ul>
           <ul class="session">
             <li><%= link_to "Perfil", services_path %></li>

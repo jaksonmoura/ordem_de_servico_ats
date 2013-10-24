@@ -1,0 +1,30 @@
+<h1>Itens#create</h1>
+<p>Find me in app/views/itens/create.html.erb</p>
+
+<table class="tb_lrg os_items">
+  <thead>
+    <tr>
+      <th class="row_sml">Tipo</th>
+      <th class="row_lrg">Descrição</th>
+      <th class="row_sml">Qtde</th>
+      <th class="row_sml">Valor (R$)</th>
+      <th class="row_med">Categoria</th>
+      <th class="action_row">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <% if @sorder.class == Service %>
+        <td>Serviço</td>
+        <% else %>
+        <td>Suprimento</td>
+        <% end %>
+        <td><%= @sorder.description %></td>
+        <td><%= @sorder.qty %></td>
+        <td><%= number_to_currency(@sorder.value, unit: "R$ ", separator: ",", delimiter: ".") %></td>
+        <td><%= @sorder.category.name if @sorder.category %></td>
+        <td><%= link_to image_tag('edit.png'), edit_order_path(@sorder), { title: "Editar", alt: "Editar" } %><%= link_to image_tag('remove.png'), @sorder, method: :delete, data: { confirm: 'Quer realmente REMOVER?' }, title: "Remover", alt: "Remover" %></td>
+      </tr>
+  </tbody>
+</table>

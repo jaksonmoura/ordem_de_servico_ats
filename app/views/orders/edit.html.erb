@@ -1,26 +1,62 @@
 <div class="_bx30pc _leftalg">
-  <h1>Editing order</h1>
-
+  <h1>Editar OS</h1>
   <%= render 'form' %>
-
-  <%= link_to 'Show', @order %> |
-  <%= link_to 'Back', orders_path %>
 </div>
 
 <div class="_bx70pc _leftalg">
   <h2 class="hbig">Itens</h2>
   <div class="new_item _bx100pc _leftalg">
     <h3 class="hmed">Novo item</h3>
-    <%= form_tag(itens_path, remote: false) do %>
+    <%= form_tag(items_path, remote: true) do %>
       <div class="field">
-        <%= label_tag :name, "Item: " %><%= text_field_tag :name, nil, class: "item_name", autofocus: true, 'data-autocompleteUrl' => find_item_orders_path %>
+        <%= text_field_tag :name, nil, class: "item_name _bx100pc", autofocus: true, 'data-autocompleteUrl' => find_item_orders_path %>
         <%= hidden_field_tag :order_id, @order.id, name: "item[order_id]" %>
         <%= hidden_field_tag :service_id, nil, name: "item[service_id]", value: "" %>
         <%= hidden_field_tag :supply_id, nil, name: "item[supply_id]", value: "" %>
-        <%= submit_tag "Adicionar" %>
+        <div class="actions">
+          <%= submit_tag "Adicionar" %>
+        </div>
       </div>
     <% end %>
   </div>
+</div>
+
+<div class="_bx100pc _leftalf">
+  <h2 class="_bx100pc hbig">Lista</h2>
+  <p>Items que compõe esta lista.</p>
+  <table class="tb_lrg os_items">
+    <thead>
+      <tr>
+        <th class="row_sml">Tipo</th>
+        <th class="row_lrg">Descrição</th>
+        <th class="row_sml">Qtde</th>
+        <th class="row_sml">Valor (R$)</th>
+        <th class="row_med">Categoria</th>
+        <th class="action_row">Ações</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @orders.each do |order| %>
+        <% @class = order.class %>
+        <% if @class == Service %>
+        <% @i = Item.where("order_id = ? AND service_id = ?", @order.id, order.id).first  %>
+        <tr class="item_sorder_<%= @i.id %>">
+          <td>Serviço</td>
+          <% else %>
+          <% @i = Item.where("order_id = ? AND supply_id = ?", @order.id, order.id).first  %>
+        <tr class="item_sorder_<%= @i.id %>">
+          <td>Suprimento</td>
+          <% end %>
+          <td><%= order.description %></td>
+          <td><%= order.qty %></td>
+          <td><%= number_to_currency(order.value, unit: "R$ ", separator: ",", delimiter: ".") %></td>
+          <td><%= order.category.name if order.category %></td>
+          <td><%= link_to image_tag('remove.png'), item_path(@i), method: :delete, data: { confirm: 'Quer realmente REMOVER?' }, title: "Remover", alt: "Remover", remote: true %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 
 <% content_for :foot do %>

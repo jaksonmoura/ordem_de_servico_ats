@@ -1,13 +1,12 @@
 Os::Application.routes.draw do
-  get "itens/create"
-  get "itens/destroy"
+  
   resources :categories
 
   resources :supplies
 
   resources :services
 
-  resources :itens, only: [:create, :destroy]
+  resources :items, only: [:create, :destroy]
 
   resources :orders do
     get :find_item, :on => :collection
