@@ -1,6 +1,6 @@
 <%j value = number_to_currency(@sorder.value, unit: "R$ ", separator: ",", delimiter: ".") %>
 <% if @kind == "srv" %>
-$('.os_items tbody').prepend('<tr class="item_sorder_<%=j @sorder.id.to_s %>"><td>Serviço</td><td><%=j @sorder.description %></td><td><%=j @sorder.qty.to_s %></td><td><%=j value %></td><td><%=j @sorder.category.name if @sorder.category %></td><td><%= link_to image_tag("remove.png"), @sorder, method: :delete, data: { confirm: "Quer realmente REMOVER?" }, title: "Remover", alt: "Remover" %></td></tr>');
+$('.os_items tbody').prepend('<tr class="item_sorder_<%=j @item.id.to_s %>"><td>Serviço</td><td><%=j @sorder.description %></td><td><%=j @item.qty.to_s %></td><td><%=j value %></td><td><%=j @sorder.category.name if @sorder.category %></td><td><%= link_to image_tag("remove.png"), @item, method: :delete, data: { confirm: "Quer realmente REMOVER?" }, title: "Remover", alt: "Remover" %></td></tr>');
 <% else %>
-$('.os_items tbody').prepend('<tr class="item_sorder_<%=j @sorder.id.to_s %>"><td>Suprimento</td><td><%=j @sorder.description %></td><td><%=j @sorder.qty.to_s %></td><td><%=j value %></td><td><%=j @sorder.category.name if @sorder.category %></td><td><%= link_to image_tag("remove.png"), @sorder, method: :delete, data: { confirm: "Quer realmente REMOVER?" }, title: "Remover", alt: "Remover" %></td></tr>');
+$('.os_items tbody').prepend('<tr class="item_sorder_<%=j @item.id.to_s %>"><td>Suprimento</td><td><%=j @sorder.description %></td><td><%=j @item.qty.to_s %></td><td><%=j value %></td><td><%=j @sorder.category.name if @sorder.category %></td><td><%= link_to image_tag("remove.png"), @item, method: :delete, data: { confirm: "Quer realmente REMOVER?" }, title: "Remover", alt: "Remover" %></td></tr>');
 <% end %>

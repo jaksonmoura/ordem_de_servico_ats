@@ -4,24 +4,28 @@
 </div>
 
 <div class="_bx70pc _leftalg">
-  <h2 class="hbig">Itens</h2>
   <div class="new_item _bx100pc _leftalg">
-    <h3 class="hmed">Novo item</h3>
+    <h2 class="hmed">Adicionar item</h2>
     <%= form_tag(items_path, remote: true) do %>
-      <div class="field">
-        <%= text_field_tag :name, nil, class: "item_name _bx100pc", autofocus: true, 'data-autocompleteUrl' => find_item_orders_path %>
+      <div class="field name">
+        <%= label_tag :name, "Item:" %> <br>
+        <%= text_field_tag :name, nil, class: "item_name", autofocus: true, 'data-autocompleteUrl' => find_item_orders_path, required: true %>
+      </div>
+      <div class="field qty">
+        <%= label_tag :name, "Qtde.:" %> <br>
+        <%= number_field_tag :qty, nil, class: "item_qty", required: true, name: "item[qty]" %>
+      </div>
         <%= hidden_field_tag :order_id, @order.id, name: "item[order_id]" %>
         <%= hidden_field_tag :service_id, nil, name: "item[service_id]", value: "" %>
         <%= hidden_field_tag :supply_id, nil, name: "item[supply_id]", value: "" %>
-        <div class="actions">
+        <div class="actions _leftalg">
           <%= submit_tag "Adicionar" %>
         </div>
-      </div>
     <% end %>
   </div>
 </div>
 
-<div class="_bx100pc _leftalf">
+<div class="items_list _bx100pc _leftalf">
   <h2 class="_bx100pc hbig">Lista</h2>
   <p>Items que compõe esta lista.</p>
   <table class="tb_lrg os_items">
@@ -29,7 +33,7 @@
       <tr>
         <th class="row_sml">Tipo</th>
         <th class="row_lrg">Descrição</th>
-        <th class="row_sml">Qtde</th>
+        <th class="row_tny">Qtde</th>
         <th class="row_sml">Valor (R$)</th>
         <th class="row_med">Categoria</th>
         <th class="action_row">Ações</th>
@@ -49,7 +53,7 @@
           <td>Suprimento</td>
           <% end %>
           <td><%= order.description %></td>
-          <td><%= order.qty %></td>
+          <td><%= @i.qty %></td>
           <td><%= number_to_currency(order.value, unit: "R$ ", separator: ",", delimiter: ".") %></td>
           <td><%= order.category.name if order.category %></td>
           <td><%= link_to image_tag('remove.png'), item_path(@i), method: :delete, data: { confirm: 'Quer realmente REMOVER?' }, title: "Remover", alt: "Remover", remote: true %></td>

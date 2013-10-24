@@ -13,3 +13,22 @@
     margin-bottom: 10px;
   }
 }
+
+.new_item .name{
+  float: left;
+  width: 75%;
+
+  .item_name{
+    width: 98%;
+  }
+}
+
+.new_item .qty{
+  float: left;
+  width: 20%;
+}
+
+.items_list{
+  float: left;
+  margin: 30px 0 10px 0;
+}
