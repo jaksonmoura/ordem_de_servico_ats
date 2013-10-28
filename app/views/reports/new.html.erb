@@ -1,0 +1,15 @@
+<h1>Relatório do mês de <%= @months[@item.created_at.month] %></h1>
+<table class="tb_sml">
+  <thead>
+    <tr>
+      <th>Qtde. usada</th>
+      <th>Qtde. restante</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @item.qty %></td>
+      <td><%= @left %></td>
+    </tr>
+  </tbody>
+</table>

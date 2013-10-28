@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show, :edit, :update, :destroy, :print]
   
   # GET /orders
   # GET /orders.json
@@ -87,6 +87,13 @@ class OrdersController < ApplicationController
       format.json { render :json => @result.to_json }
       # format.html { render :json => @result.to_json }
     end
+  end
+
+  # GET /orders/1/print
+  def print
+    @month = month
+    @orders = @order.services + @order.supplies
+    render layout: 'print'
   end
 
   private

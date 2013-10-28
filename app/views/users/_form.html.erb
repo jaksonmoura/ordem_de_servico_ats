@@ -1,0 +1,39 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <% if @user.errors.count == 1 %>
+        <h3>Usuário não salva devido à algum erro, verifique-o abaixo:</h3>
+      <% else %>
+        <h3>Usuário não salva devido à algums erros, verifique-os abaixo:</h3>
+      <% end %>
+
+      <ul>
+      <% @user.errors.each do |e, msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="fields">
+    <div class="field">
+      <label>Nome</label><br>
+      <%= f.text_field :name, autofocus: true %>
+    </div>
+    <div class="field">
+      <label>Nome de usuário</label><br>
+      <%= f.text_field :nickname %>
+    </div>
+    <div class="field">
+      <label>Senha</label><br>
+      <%= f.password_field :password %>
+    </div>
+    <div class="field">
+      <label>Confirmação da senha</label><br>
+      <%= f.password_field :password_confirmation %>
+    </div>
+  </div>
+  <div class="actions">
+    <%= f.submit "Salvar" %>
+  </div>
+<% end %>

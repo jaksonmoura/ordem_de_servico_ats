@@ -32,7 +32,12 @@
                   <li><%= link_to "Ordens de serviço", orders_path %></li>
                 </ul>
               </li>
-              <li><%= link_to "Relatório", orders_path %></li>
+              <li><%= link_to "Relatórios ▾", '#' %>
+                <ul>
+                  <li><%= link_to "Gerar relatório", reports_path %></li>
+                  <li><%= link_to "Saldo anual", reports_balance_path %></li>
+                </ul>
+              </li>
           </ul>
           <ul class="session">
             <li><%= link_to "Perfil", services_path %></li>

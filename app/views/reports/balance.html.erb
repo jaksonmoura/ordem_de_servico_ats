@@ -1,0 +1,63 @@
+<h1>Saldo anual</h1>
+<div id="accordion">
+  <h2>Serviços</h2>
+<table class="tb_med">
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th>Qtde. usadas</th>
+      <th>Qtde. restante</th>
+      <th>Gasto (R$)</th>
+      <th>Total (R$)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.description %></td>
+        <td><%= i_spent = service.items.count %></td>
+        <td><%= i_left = service.qty - i_spent %></td>
+        <% v_spent = i_spent * service.value %>
+        <td><%= number_to_currency(v_spent, unit: "R$ ", delimiter: ".", separator: ",") %></td>
+        <% v_total = service.qty * service.value %>
+        <td><%= number_to_currency(v_total, unit: "R$ ", delimiter: ".", separator: ",") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<h2>Suprimentos</h2>
+<table class="tb_med">
+  <thead>
+    <tr>
+      <th>Descrição</th>
+      <th>Qtde. usadas</th>
+      <th>Qtde. restante</th>
+      <th>Gasto (R$)</th>
+      <th>Total (R$)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.description %></td>
+        <td><%= i_spent = service.items.count %></td>
+        <td><%= i_left = service.qty - i_spent %></td>
+        <% v_spent = i_spent * service.value %>
+        <td><%= number_to_currency(v_spent, unit: "R$ ", delimiter: ".", separator: ",") %></td>
+        <% v_total = service.qty * service.value %>
+        <td><%= number_to_currency(v_total, unit: "R$ ", delimiter: ".", separator: ",") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+<% content_for :foot do %>
+  <script>
+    $(function() {
+      $( "#accordion" ).accordion();
+    });
+    </script>
+<% end %>

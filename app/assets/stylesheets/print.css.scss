@@ -1,0 +1,90 @@
+// Header
+header.print{
+  width: 100%;
+  float: left;
+
+  .container{
+    width: 100%;
+    margin: 10px auto;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #ccc;
+  }
+
+  .logo{
+    float: left;
+    margin: 10px 20px 0 0;
+  }
+}
+
+.print_date{
+  float: right;
+  margin-bottom: 10px;
+}
+// Table
+.os_print{
+  width: 100%;
+  border: 1px solid #000;
+  border-spacing: 0;
+  td, th{
+    border: 1px solid #000;
+    border-bottom: none;
+    border-right: none;
+    padding: 5px;
+  }
+
+  th{
+    border-top: none;
+  }
+
+  td:first-child, th:first-child{
+    border-left: none;
+  }
+
+  tbody tr:nth-child(2n+1){
+    background: #f1f1f1;
+  }
+
+}
+
+.total{
+  width: 100%;
+  float: right;
+  border-spacing: 0;
+
+  td{
+    float: right;
+    border: 1px solid #000;
+    border-top: none;
+    width: 200px;
+    padding: 5px;
+  }
+}
+
+.signs{
+  float: left;
+  margin: 50px auto;
+  text-align: center;
+  width: 100%;
+
+  .sign{
+    float: left;
+    width: 30%;
+    padding: 20px 0;
+    margin-left: 12%;
+
+    .name{
+      border-top: 2px solid #000;
+    }
+
+
+  }
+  .sign:last-child{
+    clear: both;
+    margin-top: 30px;
+    margin-left: 34%;
+  }
+}
+
+footer{
+  font-size: 12px;
+}

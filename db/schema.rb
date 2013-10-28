@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131024200942) do
+ActiveRecord::Schema.define(version: 20131028170649) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -80,5 +80,13 @@ ActiveRecord::Schema.define(version: 20131024200942) do
 
   add_index "supply_orders", ["order_id"], name: "index_supply_orders_on_order_id", using: :btree
   add_index "supply_orders", ["supply_id"], name: "index_supply_orders_on_supply_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "nickname"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

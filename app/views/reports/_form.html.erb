@@ -1,0 +1,38 @@
+<%= form_tag('/reports/new', class: "report_form") do %>
+  <div class="field _leftalg">
+    <%= label_tag "month", "Mês" %><br>
+    <%= select_tag "month", options_from_collection_for_select(@month, :first, :last, '0'), {prompt: "Selecione o mês", required: true} %>
+  </div>
+  <div class="_leftalg _bx100pc">
+    <div class="field">
+      Serviço: <%= radio_button_tag "category", "srv" %>
+      Suprimento: <%= radio_button_tag "category", "sup" %>
+    </div>
+    <div class="field _leftalg">
+      <%= label_tag "service_id", "Serviços", class: "service_id" %><br>
+      <%= select_tag "service_id", options_from_collection_for_select(@services, :id, :description, '1'), {prompt: "Selecione o serviço"} %>
+      <%= label_tag "supply_id", "Suprimentos", class: "supply_id" %><br>
+      <%= select_tag "supply_id", options_from_collection_for_select(@supplies, :id, :description, '1'), {prompt: "Selecione o suprimento"} %>
+    </div>
+  </div>
+    <div class="actions _leftalg">
+      <%= submit_tag "Adicionar" %>
+    </div>
+<% end %>
+
+<% content_for :foot do %>
+  <script>
+    $(document).ready( function(){
+      $('.service_id, #service_id').hide();
+      $('.supply_id, #supply_id').hide();
+    });
+    $('#category_srv').click( function() {
+      $('.service_id, #service_id').show();
+      $('.supply_id, #supply_id').hide();
+    });
+    $('#category_sup').click( function() {
+      $('.supply_id, #supply_id').show();
+      $('.service_id, #service_id').hide();
+    });
+  </script>
+<% end %>

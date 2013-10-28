@@ -1,0 +1,63 @@
+<% content_for :title do %>
+  Impressão - Ordem de Serviço
+<% end %>
+<div class="items_list _bx100pc _leftalf">
+  <h2 class="_bx100pc hbig _txtcenter">Ordem de Serviço do mês de <%= @month[@order.refers_month] %></h2>
+  <div class="print_date">Data da impressão: <%= DateTime.now.strftime("%d/%m/%Y %H:%S") %></div>
+  <table class="tb_lrg os_print">
+    <thead>
+      <tr>
+        <th class="row_sml">Tipo</th>
+        <th class="row_lrg">Descrição</th>
+        <th class="row_tny">Qtde</th>
+        <th class="row_med">Categoria</th>
+        <th class="row_sml">Valor (R$)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @orders.each do |order| %>
+        <% @class = order.class %>
+        <% if @class == Service %>
+        <% @i = Item.where("order_id = ? AND service_id = ?", @order.id, order.id).first  %>
+        <tr class="item_sorder_<%= @i.id %>">
+          <td>Serviço</td>
+          <% else %>
+          <% @i = Item.where("order_id = ? AND supply_id = ?", @order.id, order.id).first  %>
+        <tr class="item_sorder_<%= @i.id %>">
+          <td>Suprimento</td>
+          <% end %>
+          <td><%= order.description %></td>
+          <td><%= @i.qty %></td>
+          <td><%= order.category.name if order.category %></td>
+          <td class="_txtright"><%= number_to_currency(order.value, unit: "R$ ", separator: ",", delimiter: ".") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <table class="total">
+    <tbody>
+      <tr>
+        <td class="_txtright"><b>Total: <%= number_to_currency(@orders.map { |o| o.value }.sum, unit: "R$ ", separator: ",", delimiter: ".") %></b></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="signs">
+  <div class="sign">
+    <div class="name">
+      Responsável da empresa
+    </div>
+  </div>
+  <div class="sign">
+    <div class="name">
+      Diretor de Operações
+    </div>
+  </div>
+  <div class="sign">
+    <div class="name">
+      Presidente da ATS
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<!-- 
+  Desenvolvido por: Jakson Rochelly - jrochelly@gmail.com
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield :title %> | ATS</title>
+  <%= stylesheet_link_tag  "print", "misc", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <%= yield :head %>
+</head>
+<body>
+  <div class="wrapper">
+      <header class="print">
+        <div class="container">
+          <div class="logo"><%= link_to image_tag('logo_small_c.png'), root_path %></div>
+          <div class="addres">
+            Agência Tocantinense de Saneamento - ATS <br>
+            Quadra: 103 - Norte, Rua: NO-11, Lote: 11 <br>
+            CEP: 77.001-036 - Palmas - TO.
+          </div>
+      </div>
+    </header>
+    <div class="main_content">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+    <footer class="_txtcenter">
+      <div class="container">
+        <p>Desenvolvido pela Diretoria de TI - ATS - Telefone: (63) 3218-4030 - Email: <a href="mailto:ti.ats@ats.to.gov.br">ti.ats@ats.to.gov.br</a></p>
+      </div>
+    </footer>
+  </div>
+  <%= yield :foot %>
+</body>
+</html>

@@ -197,6 +197,7 @@
          -moz-box-shadow: 2px 2px 2px #555;
          box-shadow: 2px 2px 2px #555;
          transition: opacity .1s ease-in;
+         z-index: 100;
 
          li{
            float: left;
@@ -370,6 +371,7 @@
   border: 1px solid #9FC8D8;
   border-radius: 5px;
   margin: 10px 0;
+  float: left;
 
   thead{
     width: 100%;
@@ -434,13 +436,14 @@
   }
 
   .row_tny{
-    min-width: 20px;
-    max-width: 20px;
-    width: 20px;
+    min-width: 40px;
+    max-width: 40px;
+    width: 40px;
   }
 
   .row_sml{
-    min-width: 40px;
+    min-width: 60px;
+
   }
 
   .row_med{
