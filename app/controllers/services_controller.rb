@@ -4,18 +4,27 @@ class ServicesController < ApplicationController
   # GET /services
   # GET /services.json
   def index
-    @services = Service.all(include: "category")
+    year = params[:year]
+    unless year
+      @services = Service.where('year = ?', Date.today.strftime("%Y")).includes(:category)
+    else
+      @services = Service.where('year = ?', year).includes(:category)
+    end
+    @years = Service.all.select(:year).group(:year)
   end
 
   # GET /services/new
   def new
     @service = Service.new
+    # Shows current and next year
+    @supplies = [Date.today.year, Date.today.year + 1]
     @categories = Category.all
   end
 
   # GET /services/1/edit
   def edit
     @categories = Category.all
+    @supplies = [Date.today.year, Date.today.year + 1]
   end
 
   # POST /services
@@ -66,6 +75,6 @@ class ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def service_params
-      params.require(:service).permit(:description, :qty, :value, :category_id)
+      params.require(:service).permit(:description, :qty, :value, :category_id, :year)
     end
 end

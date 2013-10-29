@@ -71,8 +71,8 @@ class OrdersController < ApplicationController
   # Localiza um serviço ou uma peça/componente/ferramenta
   # E retorna os resultados juntos em json
   def find_item
-    @services = Service.where("description LIKE ?", "%#{params[:item]}%")
-    @supplies = Supply.where("description LIKE ?", "%#{params[:item]}%")
+    @services = Service.where("description LIKE ? and year = ?", "%#{params[:item]}%", Date.today.strftime("%Y"))
+    @supplies = Supply.where("description LIKE ? and year = ?", "%#{params[:item]}%", Date.today.strftime("%Y"))
 
     @result_sv = @services.map do |sv|
       { value: "SRV: " + sv.description, id: sv.id, kind: "srv" }

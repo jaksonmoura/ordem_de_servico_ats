@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
     end
 
     respond_to do |format|
-      if @item.save && allow_save
+      if allow_save && @item.save
         format.html
         format.json
         format.js

@@ -1,5 +1,5 @@
 <h1>Saldo anual</h1>
-<div id="accordion">
+<div class="_leftalg _bx100pc">
   <h2>Serviços</h2>
 <table class="tb_med">
   <thead>
@@ -26,6 +26,8 @@
     <% end %>
   </tbody>
 </table>
+</div>
+<div class="_leftalg _bx100pc">
 <h2>Suprimentos</h2>
 <table class="tb_med">
   <thead>
@@ -39,14 +41,14 @@
   </thead>
 
   <tbody>
-    <% @services.each do |service| %>
+    <% @supplies.each do |supply| %>
       <tr>
-        <td><%= service.description %></td>
-        <td><%= i_spent = service.items.count %></td>
-        <td><%= i_left = service.qty - i_spent %></td>
-        <% v_spent = i_spent * service.value %>
+        <td><%= supply.description %></td>
+        <td><%= i_spent = supply.items.count %></td>
+        <td><%= i_left = supply.qty - i_spent %></td>
+        <% v_spent = i_spent * supply.value %>
         <td><%= number_to_currency(v_spent, unit: "R$ ", delimiter: ".", separator: ",") %></td>
-        <% v_total = service.qty * service.value %>
+        <% v_total = supply.qty * supply.value %>
         <td><%= number_to_currency(v_total, unit: "R$ ", delimiter: ".", separator: ",") %></td>
       </tr>
     <% end %>

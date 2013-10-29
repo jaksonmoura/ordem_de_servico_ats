@@ -323,7 +323,7 @@
      width: 100%;
    }
 
-   .actions input, .actions a, .action_btn{
+   .action{
      float: left;
      color: #fff;
      cursor: pointer;
@@ -338,7 +338,7 @@
      border: none;
    }
 
-   .actions input:hover, .actions a:hover, .action_btn:hover{
+   .action:hover{
      background-color: #4188d9;
      background-image: -webkit-gradient(linear, left top, left bottom, from(#4188d9), to(#134782));
      background-image: -webkit-linear-gradient(top, #4188d9, #134782);
@@ -454,4 +454,8 @@
     min-width: 150px;
   }
 
+ }
+
+ .year_filter{
+  width: 200px;
  }

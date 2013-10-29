@@ -4,18 +4,27 @@ class SuppliesController < ApplicationController
   # GET /supplies
   # GET /supplies.json
   def index
-    @supplies = Supply.all(include: "category")
+    year = params[:year]
+    unless year
+      @supplies = Supply.where('year = ?', Date.today.strftime("%Y")).includes(:category)
+    else
+      @supplies = Supply.where('year = ?', year).includes(:category)
+    end
+    @years = Supply.all.select(:year).group(:year)
   end
 
   # GET /supplies/new
   def new
     @supply = Supply.new
+    # Shows current and next year
+    @supplies = [Date.today.year, Date.today.year + 1]
     @categories = Category.all
   end
 
   # GET /supplies/1/edit
   def edit
     @categories = Category.all
+    @supplies = [Date.today.year, Date.today.year + 1]
   end
 
   # POST /supplies
@@ -67,6 +76,6 @@ class SuppliesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def supply_params
-      params.require(:supply).permit(:description, :unit, :qty, :value, :category_id)
+      params.require(:supply).permit(:description, :unit, :qty, :value, :category_id, :year)
     end
 end

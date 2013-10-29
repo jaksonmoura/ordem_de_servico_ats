@@ -1,7 +1,15 @@
 <h1>Serviços</h1>
 
 <div class="actions">
-  <%= link_to 'Adicionar serviço', new_service_path %>
+  <%= link_to 'Adicionar serviço', new_service_path, class: 'action' %>
+  <div class="_rightalg year_filter">
+    <%= form_tag services_path, method: :get do %>
+      <div class="field">
+        <%= select_tag :year, options_from_collection_for_select(@years, :year, :year, '1'), {prompt: "Filtar por ano"} %>
+        <%= submit_tag "Filtrar" %>
+      </div>
+    <% end %>
+  </div>
 </div>
 
 <table class="tb_lrg">
@@ -11,6 +19,7 @@
       <th class="row_sml">Qtde</th>
       <th class="row_sml">Valor (R$)</th>
       <th class="row_med">Categoria</th>
+      <th class="row_tny">Ano</th>
       <th class="action_row">Ações</th>
     </tr>
   </thead>
@@ -22,6 +31,7 @@
         <td><%= service.qty %></td>
         <td><%= number_to_currency(service.value, unit: "R$ ", separator: ",", delimiter: ".") %></td>
         <td><%= service.category.name if service.category %></td>
+        <td><%= service.year %></td>
         <td><%= link_to image_tag('edit.png'), edit_service_path(service), { title: "Editar", alt: "Editar" } %><%= link_to image_tag('remove.png'), service, method: :delete, data: { confirm: 'Quer realmente REMOVER?' }, title: "Remover", alt: "Remover" %></td>
       </tr>
     <% end %>
@@ -29,5 +39,5 @@
 </table>
 
 <div class="actions">
-  <%= link_to 'Adicionar serviço', new_service_path %>
+  <%= link_to 'Adicionar serviço', new_service_path, class: 'action' %>
 </div>

@@ -1,8 +1,8 @@
 class ReportsController < ApplicationController
   def index
     @month = month
-    @services = Service.all
-    @supplies = Supply.all
+    @services = Service.where('year = ?', Date.today.strftime("%Y")).includes(:category)
+    @supplies = Supply.where('year = ?', Date.today.strftime("%Y")).includes(:category)
   end
 
   def new
@@ -12,7 +12,7 @@ class ReportsController < ApplicationController
     @supply_id = params[:supply_id]
     if !@service_id.empty?
       @service = Service.find(@service_id)
-      @item = @service.items.where('month(created_at) = ?', @month).first
+      @item = @service.items.where('month(created_at) = ? and year = ?', @month, Date.today.strftime("%Y")).first
       if @item
         @left = @service.qty - @item.qty 
       else
@@ -20,7 +20,7 @@ class ReportsController < ApplicationController
       end
     elsif !@supply_id.empty? 
       @supply = Supply.find(@supply_id)
-      @item = @supply.items.where('month(created_at) = ?', @month).first
+      @item = @supply.items.where('month(created_at) = ? and year = ?', @month, Date.today.strftime("%Y")).first
       if @item
         @left = @supply.qty - @item.qty
       else
